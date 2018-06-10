@@ -1,0 +1,63 @@
+#BMI Calculater 1.03
+n = input("Enter Your Name: ")
+g = input("Enter Your Gender(Male/Female): ")
+g = g.lower()
+u = input("Select(Metric/Imperial): ")
+a = "Name: Mr/Mrs/Miss"
+s = "Gender:"
+c = "Weight:"
+d = "Height:"
+e = "BMI:"
+f = "Status:"
+i = "\n"
+u = u.lower()
+if u == "metric" or u == "m":
+    w = float(input("Enter Your Weight in Kgs: "))
+    h = float(input("Enter Your Height In Cms: "))
+    b = round(w / h ** 2 * 10000)
+    if b <= 18:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Under Weight")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Under Weight")
+    elif 19 <= b <= 23:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Normal")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Normal")
+    elif 24 <= b <= 27:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Over Weight")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Over Weight")
+    else:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Obesity")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Obesity")
+elif u == "imperial" or u == "i":
+    w = float(input("Enter Your Weight in Ibs: "))
+    h = float(input("Enter Your Height In Inches: "))
+    b = round(w / h ** 2 * 703)
+    if b <= 18:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Under Weight")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Under Weight")
+    elif 19 <= b <= 23:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Normal")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Normal")
+    elif 24 <= b <= 27:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Over Weight")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Over Weight")
+    else:
+        if g == "male" or g == "m":
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Obesity")
+        else:
+            print(a, n.upper(), i, s, g.upper(), i, c, w, i, d, h, i, e, b, i, f, "Obesity")
+else:
+    print("Thank You")
